@@ -97,15 +97,13 @@ header{
 }
 .icon-list{
     font-size: 13px;
-    padding-bottom: 10px;
     padding: 15px 20px;
     border-bottom: 1px solid #ededed;
     margin-bottom: 10px;
 }
 .top-nav>li .icon-list a{
-   
-   font-weight: bold;
-   color: #333;
+   font-weight: 600;
+   color: #000;
 }
 .icon-list a:hover{
     text-decoration: underline;
@@ -140,17 +138,19 @@ a.all{
     background: #efefef;
 }
 /* ############HEADER MAIN########### */
-.mainlogo>img{
-    width: 80px;
+.mainlogo{
+    font-family: 'Tourney', cursive;
+    color:#ff5656;
+    font-size:40px;
+    text-shadow:0 0 10px #ff5656;
+    width:15%;
 }
 .page{
-    margin-left: 30px;
-    width: 75%;
+    width: 65%;
 }
 
 .page>li{
     margin-right: 30px;
-    margin-top: 5px;
     font-size: 18px;
     line-height: 1;
 }
@@ -167,22 +167,87 @@ a.all{
     color: #ff5656;
 }
 #searchform{
-    width: 20%;
+    width: 25%;
     text-align: right;
 }
 .selectbox{
     display: inline-block;
     position: relative;
+    width: 80px;
+}
+.search-select{
+    font-size: 14px;
+    padding-left: 2px;
 }
 .search-sbox{
     position: absolute;
     background: #fff;
     border: 1px solid #999;
-    width: 120px;
+    padding: 10px;
+    font-size: 13px;
+    display: none;
+}
+.search-sbox a:first-child{
+    color: #ff5656;
+    font-weight: 600;
 }
 .search-sbox>a{
     display: block;
 }
+.search-sbox>a:hover{
+    background: #fbe0e0;
+    border-bottom: underline;
+}
+#searchtext{
+    padding: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+}
+.btn-none{
+    border: none;
+    font-size: 16px;
+}
+/* ############HERO########### */
+.hero{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: url(../images/pet.png) no-repeat right 220px;
+    background-size: 35%;
+}
+.hero h1{
+    font-size: 18px;
+    font-weight: 300;
+}
+.hero a span.list{
+    font-size: 46px;
+    font-weight: 300;
+    color: #666;
+    max-width: 800px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.hero li a span{
+    display: inline-block;
+    font-size: 14px;
+    max-width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: top;
+}
+.hero li:hover a span.list,
+.hero li.active a span.list{
+    font-weight: 700;
+    color: #333;
+}
 
-
-/* ############SECTION1########### */
+/* BEST */
+.best{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #efefef;
+    border-top: 4px solid #000;
+}
