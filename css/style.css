@@ -299,6 +299,7 @@ span.prev i, span.next i{
     padding-bottom: 50px;
     background-color: #efefef;
     border-top: 4px solid #000;
+    border-bottom: 1px solid #ededed;
 }
 .best .col-4>a{
     display: block;
@@ -344,4 +345,250 @@ div.img{
 .hash span:first-child{
     color: #ff5656;
 }
+/* **********cafe-list********** */
+.cafe-list{
+    padding-top: 50px;
+}
+.cafe-list h1{
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.clist{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+}
+.clist>li{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dedede;
+}
+.tbox h1{
+    margin: 0;
+}
+.tbox img, .tbox h1{
+    margin-right: 20px; 
+}
+.tbox p{
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 0;
+}
+.cfe p:first-child{
+    width: 100px;
+    margin-right: 15px;
+}
+p.dg{
+    text-align: right;
+    font-weight: 700;
+    color: #ff5656;
+}
+p.dg::before{
+    content: "댓글";
+    color: #333;
+    font-weight: 400;
+    margin-right: 8px;
+}
+.clist>li:hover{
+    background-color: #efefef;
+}
+.notice-list{
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+.notice-list li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.notice-list li:first-child{
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.niniz{
+    width: 325px;
+    height: 200px;
+    background-color: #4260aa;  
+    position: relative;
+    border: 1px solid #efefef;
+    overflow: hidden;
+}
+.niniz .face{
+    position: absolute;
+    width: 175px;
+    height: 170px;
+    background-color: #fff;
+    border: 4px solid #000;
+    border-radius: 45%;
+    top: 34%;
+    right: -15px;
+}
+.niniz .eye1{
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 70%;
+    right: 85px;
+}
+.niniz .eye2{
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 70%;
+    right: 43px;
+}
+.niniz .nose{
+    position: absolute;
+    width: 45px;
+    height: 30px;
+    background-color: #70c8f1;
+    border-radius: 80%;
+    top: 75%;
+    right: 45px;
+}
+.niniz .mouse1{
+    position: absolute;
+    width: 17px;
+    height: 10px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: 4px solid #000;
+    border-top: 0px;
+    top: 80%;
+    right: 67px;
+}
+.niniz .mouse2{
+    position: absolute;
+    width: 17px;
+    height: 10px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: 4px solid #000;
+    border-top: 0px;
+    top: 80%;
+    right: 55px;
+}
+.niniz h1{
+    font-size: 1.4em;
+    color: #fff;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-top: 30px;
+    letter-spacing: 2px;
+}
+.page{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+}
+.page>span{
+    cursor: pointer;
+}
+.strong{
+    font-weight: 700;
+}
+.lst::before{
+    content: "/";
+}
+/* fancafe */
+.fancafe{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #efefef;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #ededed;
+}
+.fa-paw{
+    color: #7282e0;
+    margin-right: 5px;
+}
+.fancafe h1{
+    margin-bottom: 20px;
+}
+.card{
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.card-img{
+    position: relative;
+}
+.ctbox{
+    background: #000;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 5px;
+}
+.ctbox::after{
+    content: "";
+    width: 8px;
+    height: 2px;
+    background: rgba(255,255,255,0.8);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 18px;
+}
+.card-img img{
+    width: 400px;
+    height: 230px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.card-body{
+    background-color: #fff;
+    padding: 30px 25px;
+    display: flex;
+}
+.card-body img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
 
+}
+.card-body h1{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 3px;
+}
+.tbox{
+    font-size: 14px;
+}
+.tbox span{
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+    padding-left: 8px;
+}
+.tbox span::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: #ff5656;
+    top: 7px;
+    left: 0px;
+}
+.card:hover{
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2),
+                0 0 15px 0 rgba(0,0,0,0.07);
+}

@@ -36,13 +36,45 @@ $('.search-select').click(function(e){
 
 
   //slide show
-  setInterval(mySlide, 10000);
+  let slide = setInterval(mySlide, 10000);
+  $('.next').click(function(){
+    clearInterval(slide);
+    mySlide();
+    slide = setInterval(mySlide, 10000);
+  });
 
-  //chevron
+  $('.prev').click(function(){
+    clearInterval(slide);
+    prevEvent();
+    slide = setInterval(mySlide, 10000);
+  });
+ 
+  myTime();
 
-  $('.prev').click(function(
+  //데이터 가져오기
+  jQuery.ajax({
+    type: "GET",
+    url: "./data/data.json",
+    dataType: "JSON",
+    success: function(data){
+      let list = '';
+      for(let i = 0; i < data.cafelist.length; i++){
+        list += '<li><a href = "#" class="d-flex align-items-center justify-content-between">';
+        list += '<div class="tbox d-flex align-items-center">';
+        list += '<img src="'+data.cafelist[i].img+'" alt="' +data.cafelist[i].num+'">';
+        list += '<h1>'+data.cafelist[i].num+'</h1><p class="ellipsis">'+data.cafelist[i].content+'</p></div>';
+        list += '<div class="cfe d-flex"><p class="ellipsis">'+data.cafelist[i].cafename+'</p><p class="dg">'+data.cafelist[i].comment+'</p></div>';
+        list += '</a></li>';
+      }
+      $('.clist').html(list);
+    },
+    error:function(xhr, status, error){
+      console.log(error);
+    }
+  })
     
-  ));
+
+  
 
 });//jquery
 
@@ -64,3 +96,22 @@ function mySlide(){
 function ranDomList(){
   return Math.floor(Math.random() * 4);
 }
+
+function prevEvent(){
+  $('.new:first-child').removeClass("zindex");
+  $('.new:last-child').addClass('zindex').clone().prependTo('.hero');
+  $('.new:last-child').remove();
+}
+
+function myTime(){
+  let dt = new Date();
+  let y = dt.getFullYear();
+  let m = dt.getMonth();
+  let d = dt.getDate();
+  let h = dt.getHours();
+  let mm = dt.getMinutes();
+  let mt = `${y}.${m}.${d}.<strong>${h}:${mm}</strong>`;
+  $('.thetime').html(mt);
+}
+
+
