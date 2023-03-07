@@ -73,7 +73,20 @@ $('.search-select').click(function(e){
     }
   })
     
+$(window).on('scroll',function(){
+  if($(window).scrollTop() > 1700){
+    $('.angletop').fadeIn();
+  }else{
+    $('.angletop').fadeOut();
+  }
+});
 
+$('.angletop').click(function(e){
+  e.preventDefault();
+  $('html,body').animate({
+    scrollTop: '0'
+  }, 300)
+})
   
 
 });//jquery
